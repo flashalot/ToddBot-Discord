@@ -1,5 +1,6 @@
 const commando = require('discord.js-commando')
 const bot = new commando.Client();
+const cred = require("./bot_token.json")
 
 //custom command groups
 bot.registry.registerGroups([
@@ -18,5 +19,4 @@ bot.on('message', (message) => {
     }
 });
 
-
-bot.login('TOKENID');
+bot.login(cred.token)
